@@ -15,6 +15,7 @@ import pyaudio
 import wave
 import multiprocessing
 from utils.utils import *
+from utils.cosine_summary import *
 
 frams = []
 sound  = True
@@ -232,7 +233,9 @@ def stop_recording():
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
     text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
-    print(text_from_speech)
+    summary = cosine_summary()
+    summarised_text, ranked_sentences = summary.summariser(text_from_speech)
+    print(summarised_text)
 
 
 def audio() :
