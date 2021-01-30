@@ -7,12 +7,12 @@ import numpy as np
 import threading
 import os
 import time
-import docx 
+import docx
 from PIL import Image
 import ctypes, sys
-
+from utils.utils import *
 ## docx2pdf doesn't seem to be working for Ubuntu
-# from docx2pdf import convert 
+# from docx2pdf import convert
 
 import pyaudio
 import wave
@@ -88,16 +88,16 @@ def area_sel():
     def on_mouse_move(event):
         nonlocal roi_image, x2, y2
         x2, y2 = event.x, event.y
-        canvas.delete('roi-image') 
-        roi_image = image.crop((x1, y1, x2, y2)) 
+        canvas.delete('roi-image')
+        roi_image = image.crop((x1, y1, x2, y2))
         canvas.image = ImageTk.PhotoImage(roi_image)
         canvas.create_image(x1, y1, image=canvas.image, tag=('roi-image'), anchor='nw')
         canvas.coords('roi', x1, y1, x2, y2)
-        canvas.lift('roi') 
+        canvas.lift('roi')
 
-    root.withdraw()  
-    image = ImageGrab.grab()  
-    bgimage = ImageEnhance.Brightness(image).enhance(0.5)  
+    root.withdraw()
+    image = ImageGrab.grab()
+    bgimage = ImageEnhance.Brightness(image).enhance(0.5)
     win = tk.Toplevel()
     win.attributes('-fullscreen', 1)
     win.attributes('-topmost', 1)
@@ -234,6 +234,8 @@ def stop_recording():
     doc.save(name.get() + '.docx')
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
+    text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
+    print(text_from_speech)
 
 
 def audio() :

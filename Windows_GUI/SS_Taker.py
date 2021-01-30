@@ -14,6 +14,7 @@ from docx2pdf import convert
 import pyaudio
 import wave
 import multiprocessing
+from utils.utils import *
 
 frams = []
 sound  = True
@@ -230,6 +231,8 @@ def stop_recording():
     doc.save(name.get() + '.docx')
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
+    text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
+    print(text_from_speech)
 
 
 def audio() :
