@@ -11,6 +11,7 @@ import docx
 from PIL import Image
 import ctypes, sys
 from utils.utils import *
+from utils.cosine_summary import *
 ## docx2pdf doesn't seem to be working for Ubuntu
 # from docx2pdf import convert
 
@@ -44,7 +45,7 @@ stream = p.open(format=FORMAT,
 
 
 doc = docx.Document()
-
+summary_doc = docx.Document()
 try:
     if not os.path.exists('data'):
         os.makedirs('data')
@@ -235,7 +236,9 @@ def stop_recording():
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
     text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
-    print(text_from_speech)
+    summary = cosine_summary()
+    summarised_text, ranked_sentences = summary.summariser(text_from_speech)
+    print(summarised_text)
 
 
 def audio() :
