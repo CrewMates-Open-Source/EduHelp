@@ -1,0 +1,4 @@
+#N
+networkx
+nltk
+numpy
