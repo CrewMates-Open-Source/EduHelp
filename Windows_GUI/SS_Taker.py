@@ -14,8 +14,9 @@ from docx2pdf import convert
 import pyaudio
 import wave
 import multiprocessing
-from utils.utils import *
-from utils.cosine_summary import *
+import interactiveTTT
+# from utils.utils import *
+# from utils.cosine_summary import *
 
 frams = []
 sound  = True
@@ -32,11 +33,11 @@ stream = p.open(format=FORMAT,
                 channels=CHANNELS,
                 rate=RATE,
                 input=True,
-                input_device_index = 2,
+                # input_device_index = 2,
                 frames_per_buffer=CHUNK)
 
-if sys.getwindowsversion().major == 10:
-    ctypes.windll.shcore.SetProcessDpiAwareness(2) # Set DPI awareness
+# if sys.getwindowsversion().major == 10:
+#     ctypes.windll.shcore.SetProcessDpiAwareness(2) # Set DPI awareness
 
 
 doc = docx.Document()
@@ -254,11 +255,17 @@ def docx_to_pdf():
     endmsg = Label(root, text="Completed!")
     endmsg.pack() 
 
+def playgame():
+    p1 = threading.Thread(target=interactiveTTT.videocap)
+    p2 = threading.Thread(target=interactiveTTT.play)
+    p2.start()
+    p1.start()
 
 tkimage = ImageTk.PhotoImage(Image.new('RGB', VIDEO_SIZE, (0,0,0)))
-name = Entry(root)
-name.pack()
-name.insert(0, "File Name")
+name = Entry(root,width=32)
+name.pack(pady=10)
+name.insert(0, "Name of your File")
+
 mylabel = Label(root, text="By Team Crewmates")
 # w, h = VIDEO_SIZE
 # vbox = tk.Label(root, image=tkimage, width=w, height=h, bg='black')
@@ -268,13 +275,16 @@ frame = tk.Frame(root)
 frame.pack()
 
 sel_area = ttk.Button(frame, text='Start Recording', width=15, command=area_sel)
-sel_area.grid(row=0, column=0)
+sel_area.grid(row=0, column=0,padx=(10, 10), pady=(0, 10) )
 
 stp_rec = ttk.Button(frame, text='Stop Recording', width=15, command=stop_recording)
-stp_rec.grid(row=0, column=1)
+stp_rec.grid(row=0, column=1,padx=(0, 10),  pady=(0, 10) )
 
 docx_pdf = ttk.Button(frame, text='Covert to PDF', width=15, command=docx_to_pdf)
-docx_pdf.grid(row=1, column=0)
+docx_pdf.grid(row=1, column=0, padx=(10, 10), pady=(0, 10))
+
+game = ttk.Button(frame, text='Bored?', width=15, command=playgame)
+game.grid(row=1, column=1, padx=(0, 10),  pady=(0, 10))
 
 mylabel.pack()
 
