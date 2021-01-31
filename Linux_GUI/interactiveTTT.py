@@ -90,7 +90,7 @@ def get_text_pc(i, j, gb, l1, l2):
 			l1.config(state=ACTIVE) 
 			board[i][j] = "O"
 		sign += 1
-		button[i][j].config(text=board[i][j], font=('Helvetica', 12)) 
+		button[i][j].config(text=board[i][j]) 
 	x = True
 
 	if winner(board, "X"): 
@@ -124,7 +124,7 @@ def gameboard_pc(game_board, l1, l2):
 			button[i].append(j) 
 			print(i,j)
 			get_t = partial(get_text_pc, i, j, game_board, l1, l2) 
-			button[i][j] = Button(game_board, bd=5, command=get_t, height=16, width=32) 
+			button[i][j] = Button(game_board, bd=5, command=get_t, height=2, width=4, font=('Helvetica', 50, "bold")) 
 			button[i][j].grid(row=m, column=n) 
 	game_board.mainloop() 
 
@@ -203,11 +203,11 @@ def videocap():
             curr_mid=(shape[42] + shape[39]) // 2
 
             # print(prev_mid - curr_mid)
-            if(prev_mid[0]-curr_mid[0]>10):
+            if(prev_mid[0]-curr_mid[0]>15):
                 pyautogui.moveRel(20, 0, duration = 0.01)
             if(prev_mid[0]-curr_mid[0]<-10):
                 pyautogui.moveRel(-20, 0, duration = 0.01)
-            if(prev_mid[1]-curr_mid[1]>10):
+            if(prev_mid[1]-curr_mid[1]>15):
                 pyautogui.moveRel(0, -20, duration = 0.01)
             if(prev_mid[1]-curr_mid[1]<-10):
                 pyautogui.moveRel(0, 20, duration = 0.01)
