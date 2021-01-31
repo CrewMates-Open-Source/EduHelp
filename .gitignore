@@ -1,8 +1,5 @@
 env
 data
-*.wav
-*.avi
-*.docx
 __pycache__
 
 *.dat
