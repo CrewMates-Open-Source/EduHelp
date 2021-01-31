@@ -14,10 +14,17 @@ from utils.utils import *
 from utils.cosine_summary import *
 ## docx2pdf doesn't seem to be working for Ubuntu
 # from docx2pdf import convert
-
+import interactiveTTT
 import pyaudio
 import wave
 import multiprocessing
+
+# Since ImageGrab exists with PIL only in MACOS and Windows
+try:
+    from PIL import ImageGrab
+except:
+    import pyscreenshot as ImageGrab
+    
 
 frams = []
 sound  = True
@@ -28,25 +35,24 @@ RATE = 44100
 RECORD_SECONDS = 1000
 WAVE_OUTPUT_FILENAME = "output.wav"
 
-
-# Since ImageGrab exists with PIL only in MACOS and Windows
-try:
-    from PIL import ImageGrab
-except:
-    import pyscreenshot as ImageGrab
-    
 p = pyaudio.PyAudio()
 
 stream = p.open(format=FORMAT,
                 channels=CHANNELS,
                 rate=RATE,
                 input=True,
+                # input_device_index = 2,
                 frames_per_buffer=CHUNK)
+
+# if sys.getwindowsversion().major == 10:
+#     ctypes.windll.shcore.SetProcessDpiAwareness(2) # Set DPI awareness
 
 
 doc = docx.Document()
-summary_doc = docx.Document()
+
 try:
+
+    # creating a folder named data
     if not os.path.exists('data'):
         os.makedirs('data')
 
@@ -89,16 +95,16 @@ def area_sel():
     def on_mouse_move(event):
         nonlocal roi_image, x2, y2
         x2, y2 = event.x, event.y
-        canvas.delete('roi-image')
-        roi_image = image.crop((x1, y1, x2, y2))
+        canvas.delete('roi-image') 
+        roi_image = image.crop((x1, y1, x2, y2)) 
         canvas.image = ImageTk.PhotoImage(roi_image)
         canvas.create_image(x1, y1, image=canvas.image, tag=('roi-image'), anchor='nw')
         canvas.coords('roi', x1, y1, x2, y2)
-        canvas.lift('roi')
+        canvas.lift('roi') 
 
-    root.withdraw()
-    image = ImageGrab.grab()
-    bgimage = ImageEnhance.Brightness(image).enhance(0.5)
+    root.withdraw()  
+    image = ImageGrab.grab()  
+    bgimage = ImageEnhance.Brightness(image).enhance(0.5)  
     win = tk.Toplevel()
     win.attributes('-fullscreen', 1)
     win.attributes('-topmost', 1)
@@ -112,7 +118,7 @@ def area_sel():
     win.focus_force()
     win.grab_set()
     win.wait_window(win)
-    root.deiconify()
+    root.deiconify()  
 
     if roi_image:
         # p1 = multiprocessing.Process(target=start_recording,args=[(x1, y1, x2, y2)])
@@ -235,17 +241,10 @@ def stop_recording():
     doc.save(name.get() + '.docx')
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
-    cwd = os.getcwd()
-    print(cwd)
-
     text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
-    print("Text:  ",text_from_speech)
     summary = cosine_summary()
-    if(len(text_from_speech) < 1):
-        print("Not Detecting text")
-    else:
-        summarised_text, ranked_sentences = summary.summariser(text_from_speech)
-        print(summarised_text)
+    summarised_text, ranked_sentences = summary.summariser(text_from_speech)
+    print(summarised_text)
 
 
 def audio() :
@@ -259,16 +258,22 @@ def audio() :
             frams.append(data)
 
 
-# def docx_to_pdf():
-#     convert(name.get()+".docx")
-#     endmsg = Label(root, text="Completed!")
-#     endmsg.pack() 
+def docx_to_pdf():
+    convert(name.get()+".docx")
+    endmsg = Label(root, text="Completed!")
+    endmsg.pack() 
 
+def playgame():
+    p1 = threading.Thread(target=interactiveTTT.videocap)
+    p2 = threading.Thread(target=interactiveTTT.play)
+    p2.start()
+    p1.start()
 
 tkimage = ImageTk.PhotoImage(Image.new('RGB', VIDEO_SIZE, (0,0,0)))
-name = Entry(root)
-name.pack()
-name.insert(0, "File Name")
+name = Entry(root,width=32)
+name.pack(pady=10)
+name.insert(0, "Name of your File")
+
 mylabel = Label(root, text="By Team Crewmates")
 # w, h = VIDEO_SIZE
 # vbox = tk.Label(root, image=tkimage, width=w, height=h, bg='black')
@@ -278,13 +283,16 @@ frame = tk.Frame(root)
 frame.pack()
 
 sel_area = ttk.Button(frame, text='Start Recording', width=15, command=area_sel)
-sel_area.grid(row=0, column=0)
+sel_area.grid(row=0, column=0,padx=(10, 10), pady=(0, 10) )
 
 stp_rec = ttk.Button(frame, text='Stop Recording', width=15, command=stop_recording)
-stp_rec.grid(row=0, column=1)
+stp_rec.grid(row=0, column=1,padx=(0, 10),  pady=(0, 10) )
 
-# docx_pdf = ttk.Button(frame, text='Covert to PDF', width=15, command=docx_to_pdf)
-# docx_pdf.grid(row=1, column=0)
+docx_pdf = ttk.Button(frame, text='Covert to PDF', width=15, command=docx_to_pdf)
+docx_pdf.grid(row=1, column=0, padx=(10, 10), pady=(0, 10))
+
+game = ttk.Button(frame, text='Bored?', width=15, command=playgame)
+game.grid(row=1, column=1, padx=(0, 10),  pady=(0, 10))
 
 mylabel.pack()
 
