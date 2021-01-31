@@ -12,8 +12,12 @@ from PIL import Image
 import ctypes, sys
 from utils.utils import *
 from utils.cosine_summary import *
+
+
 ## docx2pdf doesn't seem to be working for Ubuntu
 # from docx2pdf import convert
+
+
 import interactiveTTT
 import pyaudio
 import wave
