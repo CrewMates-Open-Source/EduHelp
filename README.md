@@ -2,6 +2,11 @@
 
 Official Repository for DotSlash 4.0 Submission of Team 40: Crewmates.
 
+**Team Members:** 
+
+    * Shankhanil Borthakur ( U19EC017 )
+    * Sanjit Anand ( U19EC008 )
+
 ## Inspiration
 
 We faced difficulty ourselves during the online semester and were able to think about what problems a differently-abled person might face during online education and hence we came up with this hack. We intend to make it easier for a person with any challenge of sight, hearing, or physical amputation to attend online classes, webinars, or courses.
