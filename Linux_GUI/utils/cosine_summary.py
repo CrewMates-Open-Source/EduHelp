@@ -73,7 +73,10 @@ class cosine_summary:
         for i, sentence in enumerate(sentences):
             sum1 += scores[i]
         # Sorting the Sentences with scores in descending order
-        mean = float(sum1)/len(sentences)
+        if(len(sentences)>0):
+            mean = float(sum1)/len(sentences)
+        else:
+            mean = 0
         # ranked_sentences = sorted(((scores[i], sentence) for i, sentence in enumerate(sentences)), reverse=True)
         
         summary = self.summarise_text(scores, sentences, mean)

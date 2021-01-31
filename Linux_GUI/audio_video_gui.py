@@ -112,7 +112,7 @@ def area_sel():
     win.focus_force()
     win.grab_set()
     win.wait_window(win)
-    root.deiconify()  
+    root.deiconify()
 
     if roi_image:
         # p1 = multiprocessing.Process(target=start_recording,args=[(x1, y1, x2, y2)])
@@ -235,10 +235,17 @@ def stop_recording():
     doc.save(name.get() + '.docx')
     endmsg = Label(root, text="File Saved as "+ name.get()+".docx")
     endmsg.pack()
+    cwd = os.getcwd()
+    print(cwd)
+
     text_from_speech = text_det(WAVE_OUTPUT_FILENAME)
+    print("Text:  ",text_from_speech)
     summary = cosine_summary()
-    summarised_text, ranked_sentences = summary.summariser(text_from_speech)
-    print(summarised_text)
+    if(len(text_from_speech) < 1):
+        print("Not Detecting text")
+    else:
+        summarised_text, ranked_sentences = summary.summariser(text_from_speech)
+        print(summarised_text)
 
 
 def audio() :
