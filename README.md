@@ -4,8 +4,9 @@ Official Repository for DotSlash 4.0 Submission of Team 40: Crewmates.
 
 **Team Members:** 
 
-    * Shankhanil Borthakur ( U19EC017 )
-    * Sanjit Anand ( U19EC008 )
+    * Gaurav Kumar 
+    * Shankhanil Borthakur
+    * Anshoo Rajput
 
 ## Inspiration
 
