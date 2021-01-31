@@ -1,19 +1,8 @@
-import numpy as np
-import networkx as nx
-import nltk
+import numpy as np     
+import networkx as nx 
+import nltk 
 from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
-
-
-# Summarize using Cosine Similarity
-import numpy as np
-import networkx as nx
-import nltk
-from nltk.corpus import stopwords
-from nltk.cluster.util import cosine_distance
-
-
-# Summarize using Cosine Similarity
 
 class cosine_summary:
     
@@ -39,10 +28,10 @@ class cosine_summary:
         return 1 - cosine_distance(v1, v2)
     
     
-    def summarise_text(self, scores, sentences):
+    def summarise_text(self, scores, sentences, th):
         summary = []
         max_len = len(sentences)
-        th = np.mean(scores)
+        #th = np.mean(scores)
         for i in range(max_len):
             if(scores[i]< th):
                 continue
@@ -57,7 +46,7 @@ class cosine_summary:
     def summariser(self, text):
         #Breaking Down text to Sentences
         sentences = []
-        
+        in1 = text
         #STOP Words
         stop_words = stopwords.words('english')
         split_text = text.split(". ")
@@ -80,11 +69,18 @@ class cosine_summary:
         #Ranking sentences
         similarity_network = nx.from_numpy_array(similarity_matrix)
         scores = nx.pagerank(similarity_network)
-        
+        sum1 = 0
+        for i, sentence in enumerate(sentences):
+            sum1 += scores[i]
         # Sorting the Sentences with scores in descending order
-        i = 0
+        if(len(sentences)>0):
+            mean = float(sum1)/len(sentences)
+        else:
+            mean = 0
         # ranked_sentences = sorted(((scores[i], sentence) for i, sentence in enumerate(sentences)), reverse=True)
         
-        summary = self.summarise_text(scores, sentences)
+        summary = self.summarise_text(scores, sentences, mean)
         
-        return summary, ranked_sentences
+        if len(summary) < 1:
+            return in1, scores
+        return summary, scores

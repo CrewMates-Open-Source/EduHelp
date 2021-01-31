@@ -46,7 +46,7 @@ class cosine_summary:
     def summariser(self, text):
         #Breaking Down text to Sentences
         sentences = []
-        
+        in1 = text
         #STOP Words
         stop_words = stopwords.words('english')
         split_text = text.split(". ")
@@ -81,4 +81,6 @@ class cosine_summary:
         
         summary = self.summarise_text(scores, sentences, mean)
         
+        if len(summary) < 1:
+            return in1, scores
         return summary, scores
