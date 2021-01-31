@@ -4,3 +4,5 @@ data
 *.avi
 *.docx
 __pycache__
+
+*.dat

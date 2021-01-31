@@ -41,7 +41,10 @@ class cosine_summary:
 
         return summary
     
-    
+    def save_file(text):
+        file1 = open("summary.txt","w")
+        file1.write(text)
+        file1.close()
     
     def summariser(self, text):
         #Breaking Down text to Sentences
@@ -82,5 +85,9 @@ class cosine_summary:
         summary = self.summarise_text(scores, sentences, mean)
         
         if len(summary) < 1:
+            save_file(in1)
+            print('file Saved as summary.txt')
             return in1, scores
+        print('file Saved as summary.txt')
+        save_file(summary)
         return summary, scores

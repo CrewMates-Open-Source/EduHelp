@@ -13,7 +13,6 @@ import dlib
 import numpy as np
 import pyautogui
 import threading
-from playsound import playsound
 # sign variable to decide the turn of which player 
 sign = 0
 
@@ -91,17 +90,17 @@ def get_text_pc(i, j, gb, l1, l2):
 			l1.config(state=ACTIVE) 
 			board[i][j] = "O"
 		sign += 1
-		button[i][j].config(text=board[i][j]) 
+		button[i][j].config(text=board[i][j], font=('Helvetica', 12)) 
 	x = True
 
 	if winner(board, "X"): 
 		gb.destroy() 
 		x = False
-		box = messagebox.showinfo("Winner", "Congratulations!") 
+		box = messagebox.showinfo("Winner", "Player won the match") 
 	elif winner(board, "O"): 
 		gb.destroy() 
 		x = False
-		box = messagebox.showinfo("Winner", "Better luck next time") 
+		box = messagebox.showinfo("Winner", "Computer won the match") 
 	elif(isfull()): 
 		gb.destroy() 
 		x = False
@@ -125,7 +124,7 @@ def gameboard_pc(game_board, l1, l2):
 			button[i].append(j) 
 			print(i,j)
 			get_t = partial(get_text_pc, i, j, game_board, l1, l2) 
-			button[i][j] = Button(game_board, bd=5, command=get_t, height=1, width=4,font=('Helvetica', 50)) 
+			button[i][j] = Button(game_board, bd=5, command=get_t, height=16, width=32) 
 			button[i][j].grid(row=m, column=n) 
 	game_board.mainloop() 
 
@@ -134,18 +133,18 @@ def withpc(game_board):
 	game_board.destroy() 
 	game_board = Tk() 
 	game_board.title("Tic Tac Toe") 
-	l1 = Button(game_board, text="Player : X", width=15,font=('Helvetica', 12,"bold")) 
-	l1.grid(row=1, column=1, pady=(10,10)) 
+	l1 = Button(game_board, text="Player : X", width=10) 
+	l1.grid(row=1, column=1) 
 	l2 = Button(game_board, text = "Computer : O", 
-				width = 15, state = DISABLED, font=('Helvetica', 12,"bold")) 
+				width = 10, state = DISABLED) 
 	
-	l2.grid(row = 2, column = 1, pady=(0,10)) 
+	l2.grid(row = 2, column = 1) 
 	gameboard_pc(game_board, l1, l2) 
 
 # main function 
 def play(): 
 	menu = Tk() 
-	menu.geometry("400x250") 
+	menu.geometry("400x150") 
 	menu.title("Tic Tac Toe") 
 	wpc = partial(withpc, menu) 
 	
@@ -162,9 +161,9 @@ def play():
 	B3 = Button(menu, text = "Exit", command = menu.quit, activeforeground = 'red', 
 				activebackground = "yellow", bg = "red", fg = "yellow", 
 				width = 500, font = ('summer', 15), bd = 5) 
-	head.pack(side = 'top', pady=(10,10), padx=(10,10)) 
-	B1.pack(side = 'top', pady=(10,10), padx=(10,10)) 
-	B3.pack(side = 'top', pady=(10,10), padx=(10,10)) 
+	head.pack(side = 'top') 
+	B1.pack(side = 'top') 
+	B3.pack(side = 'top') 
 	menu.mainloop() 
 
 def videocap():
@@ -179,7 +178,7 @@ def videocap():
 
 
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor('Windows_GUI/Resources/shape_68.dat')
+    predictor = dlib.shape_predictor('Resources/shape_68.dat')
 
     cap = cv2.VideoCapture(0)
     ret, img = cap.read()
@@ -216,7 +215,6 @@ def videocap():
                 i+=1
                 if(i>15):
                     pyautogui.click()
-                    playsound('Windows_GUI/Resources/piano_click.mp3')
                     i=0
         cv2.imshow('video feed', img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
