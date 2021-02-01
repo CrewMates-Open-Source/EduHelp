@@ -2,6 +2,8 @@
 
 Official Repository for DotSlash 4.0 Submission of Team 40: Crewmates.
 
+## Winners of DotSlash 4.0 😃✌️💥
+
 **Team Members:** 
 
     * Gaurav Kumar 
@@ -10,11 +12,11 @@ Official Repository for DotSlash 4.0 Submission of Team 40: Crewmates.
 
 ## Inspiration
 
-We faced difficulty ourselves during the online semester and were able to think about what problems a differently-abled person might face during online education and hence we came up with this hack. We intend to make it easier for a person with any challenge of sight, hearing, or physical amputation to attend online classes, webinars, or courses.
+We faced difficulty ourselves during the online semester and were able to think about what problems a differently-abled person might face during online education and hence we came up with this hack. We intend to make it easier for a person with any challenge of sight, hearing, or physical amputation to attend online classes, webinars, or courses. We also hope that interactive software games which can be played with slight body movements, will keep children engaged who cannot played physically demanding games.
 
 ## What it does
 
-It captures audio and screenshots during any online class or conference etc. The screenshots of different slides are captures to avoid an excess of the same one accumulating. The audio is converted to text and a file containing its summary in .txt file as well as braille scripted file is saved. The braille file can be given as an input to refreshable braille display (rbd) machines. The audio files can also be used by a blind person for taking note of what happened during class. The screenshots are stored in a .docx file and can be used by a deaf person or even another person for revisiting concepts they might miss during classes.
+It captures audio and screenshots during any online class or conference etc. The screenshots of different slides are captures to avoid an excess of the same one accumulating. The audio is converted to text and a file containing its summary in .txt file as well as braille scripted file is saved. The braille file can be given as an input to refreshable braille display (rbd) machines. The audio files can also be used by a blind person for taking note of what happened during class. The screenshots are stored in a .docx file and can be used by a deaf person or even another person for revisiting concepts they might miss during classes. We also made a TicTacToe game that can be played with slight eye movements. 
 
 ## How we built it
 
