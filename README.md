@@ -49,6 +49,11 @@ It captures audio and screenshots during any online class or conference etc. The
 - A simple phase of ideation about how great it is to discuss your ideas with team-mates and mentors.
 - Research is a necessary phase and include reading blog, research papers, and discussing what things can be implemented.
 
+## Presentation Video
+
+[![Watch the video](https://img.youtube.com/vi/qgMU8F1QX5g/maxresdefault.jpg)](https://youtu.be/qgMU8F1QX5g)
+
+
 ## What's next for Edu_Help | T40: CREWMATES
 
 - Shifting GUI to a desktop app using Electron.js so that it is better to use.
