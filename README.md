@@ -42,7 +42,7 @@ It captures audio and screenshots during any online class or conference etc. The
 
 - We made a GUI using Tkinter for the first time, we had used it earlier just for plotting purposes and it was good for us.
 - Full-fledged Hackathon experience and close to 48 hours of continuous coding was something we never thought if we could do.
-- We were stuck and even after all the bugs, we were there for the judging round.
+- Although we faced many chalenges in building what we planned, we still qualified for the judging round.
 
 ## What we learned
 
