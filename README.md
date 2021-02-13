@@ -60,3 +60,6 @@ It captures audio and screenshots during any online class or conference etc. The
 - Using a different speech to conversion module to avoid latency issues. Currently, it takes close to 7 minutes to process 1 hour of video due to several requests it sends to google_api.
 - Improving summarization with a different algorithm and we need to study in more depth.
 - The Gesture control needs to be more calibrated and we wish to integrate it to provide more use case to people with amputation.
+
+## License
+Please be careful of copyright infringements while using our codebase. See LICENSE for more information. 
