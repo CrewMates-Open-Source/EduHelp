@@ -138,7 +138,13 @@ def recording_screen(x1, y1, x2, y2):
     frames_captured = 0
 
     while recording:
-        
+        img = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+        #frame = np.array(img) # not necessary
+        sc = np.array(img)
+        sc = cv2.resize(sc, VIDEO_SIZE)
+        tkimage.paste(Image.fromarray(sc))
+        frame = cv2.cvtColor(sc, cv2.COLOR_RGB2BGR)
+        out.write(frame)
         
         
         #------------------------------------------------------------------------------
@@ -183,8 +189,8 @@ def recording_screen(x1, y1, x2, y2):
             frames_captured+=1 
 
             if frames_captured>frames_count-1:
-#                 cv2.imwrite("Last.JPG", images[frames-1])
-#                 doc.add_picture('Last.JPG',width=docx.shared.Inches(6), height = docx.shared.Inches(3))
+                cv2.imwrite("Last.JPG", images[frames-1])
+                doc.add_picture('Last.JPG',width=docx.shared.Inches(6), height = docx.shared.Inches(3))
                 os.remove('Last.JPG')
         currentframe += 1   
             
