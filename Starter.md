@@ -11,9 +11,27 @@ cd  EduHelp
 ```
 git checkout -b <your_branch_name>
 ```
+5. Setting up venv-environment
+
+```
+python3 -m venv env    (Create a separate Environment)
+
+source env/bin/activate (Activate the environment)
+
+pip3 install -r requirements.txt (Install's the dependencies)
+```
+running flask server
+
+````
+export FLASK_ENV=development To set flask server in development mode
+
+flask run to start the server.
+````
+Blog part needs MySQL setup and hence we were not able to resolve it for a windows.
 
 5. Make changes in source code.
-6. Commit your changes.
+
+7. To Commit your changes. (use git)
 ```
 git commit -m "Message"
 ```
@@ -25,7 +43,9 @@ git push -u origin <your_branch_name>
 
 Finally, go to your repository in browser and click on compare and pull requests. Then add a title and description to your pull request that explains your precious effort.
 
+
 click on Compare and Pull Request
+
 
 Congratulations! boom Sit and relax, you've made your contribution to Crewmates project.
 
