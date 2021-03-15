@@ -20,29 +20,29 @@ source env/bin/activate (Activate the environment)
 
 pip3 install -r requirements.txt (Install's the dependencies)
 ```
-running flask server
+6. Running flask server
 
 ````
 export FLASK_ENV=development To set flask server in development mode
 
 flask run to start the server.
 ````
-Blog part needs MySQL setup and hence we were not able to resolve it for a windows.
+(Blog part needs MySQL setup and hence we were not able to resolve it for a windows.)
 
-5. Make changes in source code.
+7. Make changes in source code.
 
-7. To Commit your changes. (use git)
+8. To Commit your changes. (use git)
 ```
 git commit -m "Message"
 ```
-7. Push your local branch to the remote repository.
+9. Push your local branch to the remote repository.
 ```
 git push -u origin <your_branch_name>
 ```
-8. Create a Pull Request!
+10. Create a Pull Request!
 
-Finally, go to your repository in browser and click on compare and pull requests. Then add a title and description to your pull request that explains your precious effort.
-
+Finally, go to your repository in browser and click on compare and pull requests.
+Then add a title and description to your pull request that explains your precious effort.
 
 click on Compare and Pull Request
 
