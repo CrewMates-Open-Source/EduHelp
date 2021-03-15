@@ -1,5 +1,6 @@
-1. Fork this repository.
-2. Clone the forked repository.
+1. Fork this repository .     (Using Fork option on the top right corner of the repository)
+
+2. Clone the forked repository in your local.  (Use the command given below)
 ```
   git clone   https://github.com/CrewMates-Open-Source/EduHelp
 ```
@@ -11,27 +12,21 @@ cd  EduHelp
 ```
 git checkout -b <your_branch_name>
 ```
-5. Setting up venv-environment
+5. Setting up venv-environment in your local.
 
 ```
-python3 -m venv env               (Create a separate Environment)
-
+python3 -m venv env             (Create a separate Environment)
+```
+```
 source env/bin/activate           (Activate the environment)
-
+```
+```
 pip3 install -r requirements.txt  (Install's the dependencies)
 ```
-6. Running flask server
 
-````
-export FLASK_ENV=development    (To set flask server in development mode)
-````
+7. Make your changes in the sources code in the local repository.
 
- flask run to start the server.
-(Blog part needs MySQL setup and hence we were not able to resolve it for a windows.)
-
-7. Make changes in source code.
-
-8. To Commit your changes. (use git)
+8. To Commit your changes. (Use git)
 ```
 git commit -m "Message"
 ```
@@ -39,13 +34,13 @@ git commit -m "Message"
 ```
 git push -u origin <your_branch_name>
 ```
+
 10. Create a Pull Request!
 
-Finally, go to your repository in browser and click on compare and pull requests.
-Then add a title and description to your pull request that explains your precious effort.
+a.) Go to your local repository where you make the changes and click on compare and pull requests.
+b.) Now, add a title of your work and description to your pull request that explains your precious effort.
 
-click on Compare and Pull Request
-
+Click on Compare and Pull Request.
 
 Congratulations! boom Sit and relax, you've made your contribution to Crewmates project.
 
