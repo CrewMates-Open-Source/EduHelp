@@ -24,9 +24,9 @@ pip3 install -r requirements.txt  (Install's the dependencies)
 
 ````
 export FLASK_ENV=development    (To set flask server in development mode)
-
-flask run to start the server.
 ````
+
+ flask run to start the server.
 (Blog part needs MySQL setup and hence we were not able to resolve it for a windows.)
 
 7. Make changes in source code.
