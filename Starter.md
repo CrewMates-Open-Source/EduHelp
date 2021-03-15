@@ -12,6 +12,8 @@ cd  EduHelp
 ```
 git checkout -b <your_branch_name>
 ```
+This setup is necessary while working with python scripts
+
 5. Setting up venv-environment in your local.
 
 ```
@@ -23,6 +25,11 @@ source env/bin/activate           (Activate the environment)
 ```
 pip3 install -r requirements.txt  (Install's the dependencies)
 ```
+ 6. Now you are set and can run the python scripts with
+```
+python3 fileName.py
+```
+If you have installed any new dependency as a new feature add the package name to requirements.txt
 
 7. Make your changes in the sources code in the local repository.
 
