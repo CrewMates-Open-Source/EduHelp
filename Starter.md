@@ -14,16 +14,16 @@ git checkout -b <your_branch_name>
 5. Setting up venv-environment
 
 ```
-python3 -m venv env    (Create a separate Environment)
+python3 -m venv env               (Create a separate Environment)
 
-source env/bin/activate (Activate the environment)
+source env/bin/activate           (Activate the environment)
 
-pip3 install -r requirements.txt (Install's the dependencies)
+pip3 install -r requirements.txt  (Install's the dependencies)
 ```
 6. Running flask server
 
 ````
-export FLASK_ENV=development To set flask server in development mode
+export FLASK_ENV=development    (To set flask server in development mode)
 
 flask run to start the server.
 ````
