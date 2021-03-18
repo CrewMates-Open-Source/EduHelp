@@ -1,6 +1,3 @@
-#issue one ---> file name not saving as we give it to
-#issue two ---> the text input should be first transparent....done
-
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk ,FLAT
