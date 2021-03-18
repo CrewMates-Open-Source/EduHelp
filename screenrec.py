@@ -4,8 +4,8 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk ,FLAT
-from PIL import Image, ImageTk, ImageEnhance
-import pyscreenshot as ImageGrab   #for ubuntu
+from PIL import Image, ImageTk,ImageGrab, ImageEnhance
+#import pyscreenshot as ImageGrab   #for ubuntu
 import cv2
 import numpy as np
 import threading
@@ -18,7 +18,7 @@ from docx2pdf import convert
 import pyaudio
 import wave
 import multiprocessing
-#import interactiveTTT
+import interactiveTTT
 # from utils.utils import *
 # from utils.cosine_summary import *
 
