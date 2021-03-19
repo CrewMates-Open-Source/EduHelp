@@ -10,8 +10,8 @@ def image_comparison(imageA,imageB):
 	print(value_of_similarity*100)
 
 #reading the two different images
-imageA=cv2.imread("computer.jpeg")
-imageB=cv2.imread("laptop.jpeg")
+imageA=cv2.imread("sample1.png")
+imageB=cv2.imread("sample2.png")
 
 #calling the function to display the similarities
 image_comparison(imageA,imageA)
