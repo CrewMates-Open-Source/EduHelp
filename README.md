@@ -14,8 +14,8 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-## What it does ? :thinking:
-**EduHelp** simply mean to make it easier for you to *record any online session*, be it an online lecture, meetings, youtube tutorials, etc. But we are not simply making a web extension or desktop app that records your screen or gives you an audio file in the end. We mean to *save the slide show* or screen presentation going on during those meets as well as the *text file of the entire conversation* that took place. This Project will not only help normal people but also *differently abled people* because the audio is converted to text and a file containing its summary is saved in .txt file as well as *braille scripted file*.The braille file can be given as an input to refreshable braille display (rbd) machines. The audio files can also be used by a blind person for taking note of what happened during class. The screenshots are stored in a .docx file and can be used by a deaf person for revisiting concepts they might miss during classes.
+## What it does? :thinking:
+**EduHelp** simply means to make it easier for you to *record any online session*, be it an online lecture, meetings, youtube tutorials, etc. But we are not simply making a web extension or desktop app that records your screen or gives you an audio file in the end. We mean to *save the slide show* or screen presentation going on during those meets as well as the *text file of the entire conversation* that took place. This Project will not only help normal people but also *differently-abled people* because the audio is converted to text and a file containing its summary is saved in a .txt file as well as *braille scripted file*. The braille file can be given as an input to refreshable braille display (rbd) machines. The audio files can also be used by a blind person for taking note of what happened during class. The screenshots are stored in a .docx file and can be used by a deaf person for revisiting concepts they might miss during classes.
 <h2 align="center">AMAZING!!😮:star_struck:RIGHT?</h2>
 
 ## Demo
@@ -24,9 +24,9 @@ Want to know more about EduHelp. Just click the image below :point_down:
   <a href="https://youtu.be/qgMU8F1QX5g"><img src="https://img.youtube.com/vi/qgMU8F1QX5g/maxresdefault.jpg"></img></a>
 </p>
 
-## What do we think of implementation ?
- - There are lot of features which needs to be implemented for this project. To know what are those please click :point_right:[here](https://docs.google.com/document/d/1NgP7kcJPSz0XaIq51hJkgtHk4Pm7J58N76-_0py2DTc/edit?usp=sharing).
- - We would love to add other features in this project. It will be greatly appreciated if you contribute to this project and we ensure, it will be given a higher rating, i.e. level1, level2, level3 based on the usefulness and how inspirational your idea is, here by idea I mean just the idea and the flow of Idea in a `.md` file. If you can write your code for the idea you suggested, we will deal it in separate PR’s and with different level tags.
+## What do we think of implementation?
+ - There are a lot of features that need to be implemented for this project. To know what are those please click :point_right:[here](https://docs.google.com/document/d/1NgP7kcJPSz0XaIq51hJkgtHk4Pm7J58N76-_0py2DTc/edit?usp=sharing).
+ - We would love to add other features to this project. It will be greatly appreciated if you contribute to this project and we ensure, it will be given a higher rating, i.e. level1, level2, level3 based on the usefulness and how inspirational your idea is, hereby idea I mean just the idea and the flow of Idea in a `.md` file. If you can write your code for the idea you suggested, we will deal with it in separate PR’s and with different level tags.
 
 ## Tech-Stacks 💻
 - For website: `HTML`, `CSS`
@@ -50,13 +50,13 @@ Don't worry, you can refer to the following articles and also contact the projec
 - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
 ## How to contribute?
-- Read this [contribution guide](Contibution_Guidelines.md), it will give you a detailed explanation of how, what and where to contribute. 
-- Now take a look at the existing [issues](https://github.com/CrewMates-Open-Source/EduHelp/issues) or create your own issues!
+- Read this [contribution guide](Contibution_Guidelines.md), it will give you a detailed explanation of how what and where to contribute. 
+- Now take a look at the existing [issues](https://github.com/CrewMates-Open-Source/EduHelp/issues) or create your issues!
 - Wait for the issue to be assigned to you after which you can start working on it.
 - Fork the repo and create a branch for any issue that you are working upon.
 - Create a pull request which will be promptly reviewed and suggestions would be added to improve it.
 - If applicable, add screenshots to show the changes you made.
-- Last but not the least don't forget to have fun while contributing.
+- Last but not least don't forget to have fun while contributing.
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
