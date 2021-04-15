@@ -4,32 +4,24 @@ librosa==0.8.0
 moviepy==1.0.3
 networkx==2.5
 nltk==3.5
-OpenCV==4.5.1
+opencv-python>=4.5.1
 pandas==1.2.3
 Pillow==8.1.2
 pip==21.0.1
 PyAudio==0.2.11
-python==3.8.6
 SpeechRecognition==3.8.1
-tkinter==8.5
+#tkinter==8.5
 tensorflow==2.4
-
-Speech To Text Module requirements:
-SpeechRecognition==3.8.1
 moviepy==1.0.3
 decorator==4.0.2
-proglog==1.0.0
+proglog>=0.1
 requests==2.8.1
-numpy==2.7
+numpy>=1.20
 imageio-ffmpeg==0.2.0
 tqdm==4.11.2
 imageio==2.5
 urllib3!=1.25.0,!=1.25.1==2.8.1
-certifi==2.8.1
+certifi>=2020
 chardet==3.0.2
 idna==2.5
-pillow==6.2.0
-pip== 19.2.3
-
-# system audio recording requirements:
 Wave==0.0.2
