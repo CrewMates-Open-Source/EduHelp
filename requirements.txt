@@ -33,3 +33,9 @@ pip== 19.2.3
 
 # system audio recording requirements:
 Wave==0.0.2
+
+# emailAPI requirements:
+Flask==1.1.2
+Flask-Mail==0.9.1
+python-decouple==3.4
+
