@@ -25,3 +25,9 @@ tensorflow==2.4
 tqdm==4.11.2
 urllib3!=1.25.0,!=1.25.1==2.8.1
 Wave==0.0.2
+
+# emailAPI requirements:
+Flask==1.1.2
+Flask-Mail==0.9.1
+python-decouple==3.4
+
