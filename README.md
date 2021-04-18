@@ -19,10 +19,12 @@
 <h2 align="center">AMAZING!!😮:star_struck:RIGHT?</h2>
 
 ## Demo
-Want to know more about EduHelp. Just click the image below :point_down:
+Want to know more about EduHelp. Just look below :point_down:
 <p align="center">
-  <a href="https://youtu.be/qgMU8F1QX5g"><img src="https://img.youtube.com/vi/qgMU8F1QX5g/maxresdefault.jpg"></img></a>
+  <img src="Assets/crewmates.gif"></img>
 </p>
+
+[Youtube Link](https://youtu.be/qgMU8F1QX5g)
 
 ## What do we think of implementation?
  - There are a lot of features that need to be implemented for this project. To know what are those please click :point_right:[here](https://docs.google.com/document/d/1NgP7kcJPSz0XaIq51hJkgtHk4Pm7J58N76-_0py2DTc/edit?usp=sharing).
