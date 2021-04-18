@@ -45,48 +45,43 @@
   }
   
   .navbar {
-    font-size: 1.2rem;
-    
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
     background:black;
+    color:#fff;
   }
-  
-  .navbar .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+  .navbar a
+  {
+    color: #fff;
   }
-  
-  .navbar .logo {
-    font-size: 2rem;
-    color: aliceblue;
+  .navbar a:hover
+  {
+    color: aqua;
   }
-  .navbar .logo span{
-  white-space:nowrap;
-  color: #2bdbdc;
-  font-size:18px;
-  position:relative;
-  bottom:0;
-  top: 100;
-  left:10px;
+  .navbar-toggler
+  {
+    background-color: gray !important;
   }
-  
-  .navbar ul {
-    justify-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .navbar-nav
+  {
+    position: relative;
+    right: -20vw;
   }
-  
-  .navbar a {
-    padding: 0 1rem;
+  .navbar-brand
+  {
+    font-weight: 900;
+    font-size: 2rem !important;
+    margin-left: 2vw !important;
   }
-  
-  .navbar a:hover {
-    color:aqua;
+  .navbar-brand2
+  {
+    color: aqua !important;
+    text-decoration: none;
+    font-size: 1.3rem !important;
+    margin-top: 2vh;
   }
-  
+  .nav-item .nav-link
+  {
+    font-size: 1.3rem !important;
+  }
   .section-a {
     margin: 2rem 0;
   }
@@ -306,7 +301,6 @@
   .section-e
   {
     position: relative;
-    text-align: center;
   }
 .section-e .container {
           background: #12171a;
