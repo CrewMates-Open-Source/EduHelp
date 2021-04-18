@@ -11,6 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Screenshot Taker</title>
+  <style>
+  #Contact h3
+  {
+    color:#fff;
+  }
+  </style>
 </head>
 
 <body>
@@ -67,12 +73,13 @@
       </div>
       <a href="https://www.youtube.com/watch?v=qgMU8F1QX5g">
         <img src="https://img.youtube.com/vi/qgMU8F1QX5g/maxresdefault.jpg" alt="Watch The Video">
+      </a>
     </div>
   </section>
 
-
-  <section id="team" class="team-area pt-120 pb-130">
-    <div class="container">
+<div class="container">
+  <section id="team" class="team-area">
+    
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-10">
           <div class="section-title text-center pb-30">
@@ -140,11 +147,14 @@
           </div>
         </div>
       </div>
-    </div>
+   
   </section>
+ </div>
+
+ <div class="container text-white px-0">
   <section id="Contact" class="section-e">
-    <div class="container">
-      <h3>Contact Form</h3>
+    <div class="container p-1">
+      <h3 class="mt-2">Contact Form</h3>
       <form action="http://127.0.0.1:5000/contactUs" method="post" name="contact_form">
         <label for="first_name">First Name</label>
         <input name="first_name" type="text" required placeholder="John" />
@@ -163,14 +173,21 @@
       </form>
     </div>
   </section>
+ </div>
+ <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
   <footer class="section-footer py-4 bg-primary">
         <center>
           <h2>Contact Us</h2>
-            <a href="#" class="fa fa-facebook"></a>
-  <a href="#" class="fa fa-twitter"></a>
-  <a href="#" class="fa fa-linkedin"></a>
-  <a href="#" class="fa fa-instagram"></a>
-  <a href="#" class="fa fa-youtube"></a>
+            <div class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button github" href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="social-button whatsapp" href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
         
   <h3>
     </br>
