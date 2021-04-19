@@ -299,58 +299,6 @@
         .team-style-eleven:hover .team-content .team-social{top:-20px;visibility:visible;opacity:1}
         .team-style-eleven:hover .team-content .team-name a{color:#fff}
         .team-style-eleven:hover .team-content .sub-title{color:#fff}
-  .section-e
-  {
-    position: relative;
-  }
-.section-e .container {
-          background: #12171a;
-          border-radius: 4px;
-        }
-  .section-e .container h3{
-          text-align: center;
-        }
-  .section-e  label {
-          font-size: 0.85em;
-          margin-left: 12px;
-        }
-  .section-e input[type=text],input[type=email], textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid whitesmoke;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-  .section-e input[type=text]:focus,input[type=email]:focus, textarea:focus {
-          border: 1px solid green;
-        }
-  .section-e input[type=submit] {
-          background: #64B5F6;
-          margin: 0 auto;
-          outline: 0;
-          color: white;
-          border: 0;
-          padding: 12px 24px;
-          border-radius: 4px;
-          transition: all ease-in-out 0.1s;
-          position: relative;
-          display: inline-block;
-          text-align: center;
-        }
-  .section-e input[type=submit]:focus {
-          background: #A5D6A7;
-          color: whitesmoke;
-        }
-  .section-e input[type=submit]:hover {
-          background: #2196F3;
-        }
-  .section-e .center 
-  {
-      text-align: center;
-  }
   .section-footer {
     background: var(--primary-color);
     color: #fff;
@@ -553,4 +501,15 @@
       margin: 30px;
     }
   }
-  
+  #team .title
+  {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width:992px) {
+    #team .title
+    {
+      font-size: 3rem;
+    }
+      
+  }
