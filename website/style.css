@@ -300,7 +300,7 @@
         .team-style-eleven:hover .team-content .team-name a{color:#fff}
         .team-style-eleven:hover .team-content .sub-title{color:#fff}
   .section-footer {
-    background: var(--primary-color);
+    background:  #323337!important;
     color: #fff;
     padding: 4rem 0;
   }
