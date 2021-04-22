@@ -18,12 +18,44 @@
   {
     color:#fff;
   }
+  
+.outer{
+    height:100vh;
+    width:100vw;
+   background-color: #00c0cb;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#mypage
+{
+   position: relative;
+   z-index: 1000;
+   height:70%;
+   width:50%;
+   top:20vh;
+   left:32vw;
+    background: url("/website/image/preloaderimg.gif");
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    background-size: contain;
+    
+}
   </style>
 </head>
 
 <body>
   <!-- Back to top button -->
 <a id="button" style="text-decoration:none"></a>
+
+<!-- preloader  -->
+<div class=" text-center outer">
+  <div id="mypage">
+      <!-- <img src="2.png" alt="Loading" /> -->
+ </div>
+</div>
+
 
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
@@ -75,7 +107,7 @@
           commodi placeat ea itaque modi corrupti corporis nam voluptas aut
           reprehenderit eaque culpa.
         </p>
-        <a href="#about">Read More</a>
+        <a href="#about" style="z-index: -1;">Read More</a>
       </div>
       <img src="website/image/s.gif" alt="" />
     </div>
@@ -231,5 +263,17 @@ btn.on('click', function(e) {
 });
     </script>
     <script src="/website/darkmode.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      setTimeout(() => {  
+
+$(document).ready(function(){
+ console.log("ready")
+ $('#mypage').fadeOut(4000);
+ $('.outer').fadeOut(4000);
+});
+
+}, 5000);
+    </script>
 </body>
 </html>
