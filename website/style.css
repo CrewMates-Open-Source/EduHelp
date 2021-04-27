@@ -146,44 +146,36 @@
   }
   
   .section-c {
-    position: relative;
+   
     background: url('image/back.jpg') no-repeat bottom center/cover;
-    height: 600px;
-    
+       
   }
-  .section-c-inner h2 {
-    font-size: 5rem;
+  .section-c h1 {
+    font-size: 4rem;
     text-align: center;
-    color: black;
-    
+    color: #fff;
   }
-  .section-c .gallery img
-  {
-    position: absolute;
-	max-width: 60%;
-	top: 10%;
-	left: 10%;
-    border-radius: 3px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  iframe {
+    width: 70%;
+    height: 70vh;
+    margin: 0px auto;
+      text-align: CENTER;
+      JUSTIFY-CONTENT: CENTER;
+      DISPLAY: flex;
   }
-  .section-c .gallery img:empty
-  {
-    top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+  @media screen and (max-width:992px) {
+    iframe {
+      width: 95%;
+      height: 50vh;
+      margin: 0px auto;
+      text-align: CENTER;
+      JUSTIFY-CONTENT: CENTER;
+      DISPLAY: flex;
+    }
+    .section-c h1 {
+      font-size: 2.5rem;
+    }
   }
-  @media screen and (orientation: portrait) {
-    .section-c .gallery img { max-width: 90%; }
-  }
-  
-  @media screen and (orientation: landscape) {
-    .section-c .gallery img { max-height: 90%; }
-  }
-  
 /* css for our teams start */
 
 .heading-title
