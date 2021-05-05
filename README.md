@@ -187,7 +187,7 @@ Awesome! You have made your first contribution. If you have any doubts please le
 
 This project is licensed under GPL v3. To know more about it you can refer [LICENSE](LICENSE).
 
-## Contributors :smiling_face_with_three_hearts:
+## Contributors 
 
 ### Credits goes to these people:✨
 
