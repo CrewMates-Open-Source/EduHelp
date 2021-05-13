@@ -15,7 +15,7 @@ time_stamp= datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
 file_name=f'{time_stamp}.mp4'
 
 video=cv2.VideoWriter_fourcc('m','p','4','v')
-screen_recorder=cv2.VideoWriter(file_name,video,5.0,(width,height))
+screen_recorder=cv2.VideoWriter(file_name,video,3.0,(width,height))
 while True:
     img=ImageGrab.grab(bbox=(0,0,width,height)) #takes snapshot of the screen
     np_img=np.array(img)
